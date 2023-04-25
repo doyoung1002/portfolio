@@ -27,7 +27,7 @@
       <a href="#">DoYoung</a>
     </div>
     <ul class="navbar__menu">
-      <li class="navbar__menu__item">Home</li>
+      <li class="navbar__menu__item active">Home</li>
       <li class="navbar__menu__item">About</li>
       <li class="navbar__menu__item">Skills</li>
       <li class="navbar__menu__item">My work</li>
@@ -46,20 +46,22 @@
 
 
   <!-- About -->
-  <section id="about">
+  <section id="about" class="section">
     <h1>About me</h1>
-    <P>설명글 적기</P>
+    <P>
+      설명글 적기
+    </P>
     <div class="about__majors">
       <div class="major">
         <div class="major__icon">
           <i class="fa-brands fa-html5"></i>
         </div>
         <h2 class="major__title">HTML</h2>
-        <p class="major__description">
+        <div class="major__description">
           HTML, CSS
-        </p>
+        </div>
       </div>
-    </div>
+    
     <div class="major">
       <div class="major__icon">
         <i class="fa-brands fa-js"></i>
@@ -80,13 +82,33 @@
       </p>
     </div>
     </div>
+</section>
     <div class="about__jobs">
       <div class="job">
-        <img src="imags/jobs/항해99.png" alt="hanghae99" class="job__logo">
-        <p class="job__name">항해 99</p>
+        <img src="imags/jobs/항해99.png" alt="hanghae99" 
+        class="job__logo" 
+        />
+        <div class="job__description">
+          <p class="job__name">
+            항해 99
+          </p>
+          <p class="job__period">2023.3 ~ 2023.
+        </div>
+        </div>
+        <div class="job">
+          <img src="imags/jobs/항해99.png"
+          alt="hanghae99"
+          class="job__logo"
+          />
+          <div class="job__description">
+        <p class="job__name">
+          항해 99
+        </p>
+        <p class="job__period">2023.3 ~ 2023.6</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
   <!-- Skills -->
   <section id="skills">
     <h1>Skills</h1>
