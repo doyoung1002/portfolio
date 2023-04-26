@@ -97,20 +97,28 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
   align-items: center;
-  color: var(--color-white);
+  background-color: transparent;
+  transition: all var(--animation-duration) ease-in-out;
 }
 
-.navbar__menu {
-  display: flex;
+#navbar.navbar--dark {
+  background-color: var(--color-pink);
+  padding: 6px;
 }
 
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  color: white;
+}
+
+.navbar__menu {
+  display: flex;
 }
 
 .navbar__menu__item {
@@ -118,6 +126,7 @@ p {
   margin: 0 4px;
   cursor: pointer;
   border-radius: var(--size-border-radius);
+  color: var(--color-white);
 }
 
 .navbar__menu__item.active {
@@ -143,6 +152,7 @@ p {
 #home {
   background: url("imags/background/background.png") center/cover no-repeat;
   padding: 40px;
+  padding: 120px;
   text-align: center;
 }
 
