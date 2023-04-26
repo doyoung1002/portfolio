@@ -62,37 +62,25 @@ workBtnContainer.addEventListener('click', (e) => {
     return;
   }
 
-  projectsContainer.classList.add("anim-out");
+  // Remove selection from the previous item and select the new one
+  const active = document.querySelector('.category__btn.selected');
+  active.classList.remove('selected');
+  const target =
+    e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('selected');
 
-
-
-  projects.forEach((project) => {
-
-    const type = project.dataset.type;
-
-
-
-    if (filter === "*" || filter === type) {
-
-      project.classList.remove("invisible");
-
-    }
-
-    else {
-
-      project.classList.add("invisible");
-
-    }
-
-  });
-
+  ProjectContainer.classList.add('anim-out');
   setTimeout(() => {
-
-    projectsContainer.classList.remove("anim-out");
-
+    projects.forEach((project) => {
+      console.log(project.dataset.type);
+      if (filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    ProjectContainer.classList.remove('anim-out');
   }, 300);
-
-
 });
 
 // console.log('-----------------')
